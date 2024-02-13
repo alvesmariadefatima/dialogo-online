@@ -49,6 +49,7 @@ function Home() {
                 </div>
 
                 <div className={styles.inputGroup}>
+                    <label htmlFor="password">Senha:</label>
                     <input 
                         type="password" 
                         id="senha" 
