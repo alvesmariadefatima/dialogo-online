@@ -49,17 +49,17 @@ function Home() {
                 </div>
 
                 <div className={styles.inputGroup}>
-                    <label htmlFor="senha">Senha:</label>
                     <input 
                         type="password" 
                         id="senha" 
                         name="senha" 
                         value={senha} 
-                        onChange={handleSenhaChange} 
+                        onChange={(e) => setSenha(e.target.value)} 
                         className={styles.inputField} 
                         aria-label="Senha"
                         maxLength={8}
                     />
+
                     {senhaError && (
                         <div className={styles.error}>
                             {senhaError}
