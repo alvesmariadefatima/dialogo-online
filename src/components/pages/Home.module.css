@@ -1,0 +1,115 @@
+body {
+    background-color:#6495ED;
+}
+
+/* Estilos gerais */
+.titulosite, .slogan {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.txtlogin {
+    color: blue;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+label {
+    font-family: 'Arial', sans-serif;
+    color: #6495ED;
+    font-weight: 600;
+    text-align: center;
+}
+
+.linkcriarconta {
+    color: blue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.inputGroup {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center; /* Centralizar os inputs */
+}
+
+.inputField {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btnlogin {
+    background-color: #6495ED;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.message {
+    color: blue;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.main {
+    background-color: white;
+    width: 60%; /* Ajuste conforme necessário */
+    margin: 50px auto; /* Centralizar na tela */
+    border-radius: 20px;
+    padding: 20px; /* Adicionar algum espaçamento interno */
+}
+
+/* Estilos para telas maiores, como computadores */
+@media (min-width: 769px) {
+    .main {
+        width: 40%; /* Ajuste conforme necessário */
+        max-width: 600px; /* Definir uma largura máxima */
+        margin: 50px auto; /* Centralizar na tela */
+        padding: 20px; /* Adicionar algum espaçamento interno */
+    }
+}
+
+/* Estilização dos campos de texto */
+
+@media (max-width: 768px) {
+    .inputField {
+        width: calc(100% - 10px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para tablets e celulares */
+@media (max-width: 768px) {
+    .main {
+        width: 40%; /* Ocupar 80% da largura da tela */
+        border-radius: 20px;
+        background-color: white;
+        margin: 50px auto; /* Centralizar na tela */
+        padding: 20px; /* Adicionar algum espaçamento interno */
+    }
+
+    .inputGroup {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .btnlogin {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}

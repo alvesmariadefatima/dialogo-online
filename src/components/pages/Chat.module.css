@@ -1,0 +1,121 @@
+/* Estilos para dispositivos de tela grande (desktop) */
+.chat-container {
+  background-color: white;
+  margin: 0 auto;
+  height: 50vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.txtbatepapo {
+  color: blue;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.chat-messages {
+  padding: 10px;
+  overflow-y: auto;
+  flex: 1;
+  width: 100%;
+}
+
+.user-icon {
+  color: blue;
+  background-color: white; /* Adicionando fundo branco */
+  border-radius: 50%; /* Deixando em formato circular */
+  padding: 8px; /* Ajustando o padding para tornar o ícone menor */
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #f2f2f2;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  max-width: 20%;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.nomesalachat, .descricaosalachat {
+  text-align: center;
+  color: blue;
+}
+
+.send-back {
+  background-color: #45a049;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.containerButton {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.send-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .chat-container {
+    margin-top: 0; /* Reduzir a margem superior */
+    height: 50vh; /* Definir altura total da tela */
+    border-radius: 10px; /* Remover o arredondamento das bordas */
+  }
+
+  .header {
+    margin-top: 20px; /* Reduzir a margem superior */
+  }
+
+  .send-back {
+    background-color: #45a049;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .chat-message {
+    max-width: 20%; 
+  }
+}

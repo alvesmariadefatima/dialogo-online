@@ -1,0 +1,121 @@
+/* Estilos comuns a todos os tamanhos de tela */
+.txtsalasexistentes {
+    text-align: center;
+    color: white;
+}
+
+.txtsala, .txtdescricao {
+    color: blue;
+    text-align: center;
+}
+
+.send-back {
+    width: 15vw; /* Define a largura do botão para 15% da largura da tela */
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 10px; /* Ajusta o espaçamento superior para 10 pixels */
+    border: none;
+    border-radius: 20px;
+}
+
+.containerButton {
+    text-align: center;
+}
+
+.containerSalasExistentes {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Layout de grade com tamanho mínimo de 200 pixels e ajuste automático */
+    justify-content: space-between;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.containerSalasExistentes section {
+    display: grid;
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels entre as sections */
+}
+
+.containerSalasExistentes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que as sections sejam organizadas em várias linhas */
+}
+
+.containerSalasExistentes section {
+    width: 200px; /* Defina a largura das sections conforme necessário */
+    margin: 10px; /* Adiciona margens ao redor de cada section */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.containerSalasExistentes .btnEntrarSala,
+.containerSalasExistentes .send-back {
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels entre os botões */
+}
+
+.txtnomesalas {
+    color: black;
+    text-align: center;
+}
+
+.btnEntrarSala {
+    width: 20vw; /* Define a largura do botão para 20% da largura da tela */
+    background-color: #45a049;
+    border: none;
+    color: white;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block; /* Permite definir margens laterais automáticas */
+    padding: 10px; /* Adiciona espaço interno */
+}
+
+/* Estilos para dispositivos com largura de tela menor que 768px (por exemplo, tablets e smartphones em orientação retrato) */
+@media (max-width: 768px) {
+    section {
+        width: 80%; /* Reduz a largura da section para 80% da largura da tela */
+    }
+
+    .containerSalasExistentes section {
+        width: 90%; /* Reduz a largura de cada section para 90% da largura da tela */
+    }
+
+    .btnEntrarSala,
+    .send-back {
+        width: 20%; /* Reduz a largura do botão para 80% da largura da tela */
+    }
+}
+
+/* Estilos para dispositivos com largura de tela entre 768px e 1024px (por exemplo, tablets em orientação paisagem) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        width: 50%; /* Reduz a largura da section para 50% da largura da tela */
+    }
+
+    .containerSalasExistentes section {
+        width: 45%; /* Reduz a largura de cada section para 45% da largura da tela */
+    }
+
+    .btnEntrarSala,
+    .send-back {
+        width: 50%; /* Reduz a largura do botão para 50% da largura da tela */
+    }
+}
+
+/* Estilos para dispositivos com largura de tela maior que 1024px (por exemplo, desktops) */
+@media (min-width: 1025px) {
+    section {
+        width: 30vw; /* Mantém a largura da section em 30% da largura da tela */
+    }
+
+    .containerSalasExistentes section {
+        width: 200px; /* Mantém a largura de cada section em 200 pixels */
+    }
+
+    .btnEntrarSala,
+    .send-back {
+        width: 10vw; /* Mantém a largura do botão em 10% da largura da tela */
+    }
+}

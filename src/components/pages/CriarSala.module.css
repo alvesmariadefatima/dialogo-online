@@ -1,0 +1,83 @@
+.txtcriarnovasala {
+    text-align: center;
+    color: white;
+}
+
+.mainCriarSalaChat {
+    width: 80%; /* Defina a largura para 80% da largura da tela */
+    max-width: 600px; /* Defina a largura máxima para evitar que o conteúdo se estenda demais */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; /* Centralize horizontalmente */
+}
+
+label {
+    display: block; /* Altere para bloco para que cada rótulo esteja em uma linha separada */
+    text-align: center; /* Alinhe o texto ao centro */
+}
+
+.send-back {
+    width: 10vw; /* Define a largura do botão para 15% da largura da tela */
+    padding: 10px;
+    background-color: white;
+    color: blue;
+    font-weight: 600;
+    margin-top: 10px; /* Ajusta o espaçamento superior para 10 pixels */
+    border: none;
+    border-radius: 10px;
+}
+
+.containerInput, .containerButton {
+    text-align: center;
+}
+
+.titulosite {
+    text-align: center;
+    color: white;
+}
+
+.btnCriarSala {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px; /* Aumente o preenchimento para tornar o botão mais clicável */
+    margin-top: 20px; /* Aumente a margem superior para espaçamento */
+}
+
+.inputField {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .mainCriarSalaChat {
+        width: 70%; /* Reduza a largura para 90% da largura da tela em dispositivos móveis */
+    }
+
+    label {
+        text-align: center; /* Centralize o texto dos rótulos em dispositivos móveis */
+    }
+}
+
+/* Estilização dos campos de texto */
+
+@media (max-width: 768px) {
+    .inputField {
+        width: calc(80% - 10px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin: 0 auto;
+    }
+
+    .send-back {
+        width: 30%; /* Reduz a largura do botão para 50% da largura da tela */
+    }
+}

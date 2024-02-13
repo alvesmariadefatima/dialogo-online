@@ -1,0 +1,133 @@
+.titulocadastro {
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+p {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.titulosite {
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.btncadastrar {
+    background-color: green;
+    color: white;
+    font-size: 18px; /* Ajuste conforme necessário */
+    border: none;
+    padding: 10px 15px; /* Ajuste para aumentar o tamanho do botão */
+    border-radius: 10px;
+}
+
+.btnvoltar {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.message {
+    color: blue;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.containerButtons {
+    display: flex;
+    gap: 10px; /* Ajuste conforme necessário para o espaçamento desejado */
+    margin-top: 20px; /* Ajuste conforme necessário */
+    justify-content: center; /* Centraliza os itens na horizontal */
+}
+
+.mainCadastro {
+    width: 30vw;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.titulosite {
+    text-align: center;
+}
+
+.titulocadastro {
+    text-align: center;
+}
+
+.mainCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputField {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Adicione estas regras de estilo no seu arquivo de estilos (Cadastro.module.css ou styles.css) */
+.inputGroupCadastro {
+    width: 300px; /* Ajuste conforme necessário */
+    text-align: center; /* Centraliza o conteúdo na horizontal */
+    margin: 10px; /* Ajuste conforme necessário */
+}
+
+.labelCadastro {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center; 
+}
+
+/* Adicione esta regra para centralizar o texto nos inputs */
+.inputCadastro {
+    width: 100%; /* Preenche toda a largura do inputGroupCadastro */
+    box-sizing: border-box; /* Mantém a largura total, incluindo padding e borda */
+    margin-bottom: 10px; /* Ajuste conforme necessário */
+}
+
+
+.labelCadastro {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.subtitulocadastro {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainCadastro {
+        width: 80vw;
+    }
+
+    .inputGroupCadastro {
+        width: 80%; /* Ajuste conforme necessário */
+    }
+}
+
+
+/* Estilização dos campos de texto */
+
+@media (max-width: 768px) {
+    .inputField {
+        width: calc(80% - 10px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin: 0 auto;
+    }
+}
