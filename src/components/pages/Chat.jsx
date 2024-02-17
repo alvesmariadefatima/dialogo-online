@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { FaUser } from 'react-icons/fa';
 import styles from './Chat.module.css';
 import Navbar from '../Navbar/Navbar';
-import { FaUser } from 'react-icons/fa'; // Importando o ícone de usuário
 
 const Chat = () => {
-  const location = useLocation();
-  const { nomeSala, descricao } = location.state || {};
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(() => {
+    const storedMessages = localStorage.getItem('chatMessages');
+    return storedMessages ? JSON.parse(storedMessages) : [];
+  });
   const [newMessage, setNewMessage] = useState('');
-  const [showAlert, setShowAlert] = useState(false);
+  const [currentUser, setCurrentUser] = useState(() => {
+    const storedUser = localStorage.getItem('currentUser');
+    return storedUser ? storedUser : 'user1';
+  });
+
+  useEffect(() => {
+    // Salvando as mensagens no localStorage sempre que houver alterações
+    localStorage.setItem('chatMessages', JSON.stringify(messages));
+    // Salvando o usuário atual no localStorage
+    localStorage.setItem('currentUser', currentUser);
+  }, [messages, currentUser]);
+
+  useEffect(() => {
+    // Simulação de uma conversa prévia
+    const initialConversation = [
+      { id: 1, user: 'user1', text: 'Olá, tudo bem?' },
+      { id: 2, user: 'user2', text: 'Oi! Sim, e você?' },
+      { id: 3, user: 'user1', text: 'Estou bem também, obrigado por perguntar.' },
+      { id: 4, user: 'user2', text: 'Que bom!' },
+      { id: 5, user: 'user1', text: 'Você fez alguma coisa interessante hoje?' },
+      { id: 6, user: 'user2', text: 'Sim, fui ao parque com alguns amigos. Foi bem divertido.' },
+      { id: 7, user: 'user1', text: 'Legal! Eu fiquei em casa assistindo filmes.' },
+      { id: 8, user: 'user2', text: 'Também é uma ótima forma de passar o tempo.' },
+    ];
+  
+    setMessages(initialConversation);
+  }, []);
+  
 
   const handleMessageChange = (event) => {
     setNewMessage(event.target.value);
@@ -21,20 +48,13 @@ const Chat = () => {
       alert('Digite uma mensagem.');
       return;
     }
-    const newMessageObj = { id: messages.length + 1, text: newMessage };
+    
+    const newMessageObj = { id: messages.length + 1, user: currentUser, text: newMessage };
     setMessages([...messages, newMessageObj]);
     setNewMessage('');
-  };
 
-  const navigate = useNavigate();
-
-  const handleChat = () => {
-    if (!nomeSala.trim() || !descricao.trim()) {
-      setShowAlert(true);
-    } else {
-      setShowAlert(false);
-      navigate('/Chat');
-    }
+    // Alternando entre os usuários após enviar a mensagem
+    setCurrentUser(currentUser === 'user1' ? 'user2' : 'user1');
   };
 
   return (
@@ -45,28 +65,15 @@ const Chat = () => {
         <h3>Conecte-se com pessoas incríveis e faça amizades 💗</h3>
       </div>
 
-      {showAlert && (
-        <div className={styles['alert-message']}>
-          ⚠️ Preencha todos os campos antes de continuar.
-        </div>
-      )}
-
-      <div className={styles['containerButton']}>
-        <Link className={styles.btnEntrar} to="/SalaEscolherChat">
-          <button type="submit" className={styles['send-back']}>
-            Voltar
-          </button>
-        </Link>
-      </div>
-
       <div className={styles['chat-container']}>
         <div>
           <h1 className={styles.txtbatepapo}>Bate-papo 🗣️</h1>
         </div>
         <div className={styles['chat-messages']}>
           {messages.map((message) => (
-            <div key={message.id} className={styles['chat-message']}>
-              <FaUser className={styles['user-icon']} /> {message.text}
+            <div key={message.id} className={`${styles['chat-message']} ${message.user === currentUser ? styles['current-user'] : ''}`}>
+              {message.user === 'user1' && <FaUser className={styles['user-icon']} />}
+              {message.text}
             </div>
           ))}
         </div>
