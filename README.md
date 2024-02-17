@@ -4,7 +4,7 @@ Bem-vindo ao Diálogo Online!
 
 ## Descrição do Projeto
 
-O Diálogo Online é uma plataforma inovadora desenvolvida em React que proporciona uma experiência envolvente de chat simulando interações em tempo real. Esta aplicação foi cuidadosamente criada para fornecer uma solução eficaz e moderna para a comunicação online, proporcionando uma experiência de usuário fluida e agradável.
+O Diálogo Online é uma plataforma inovadora desenvolvida em React que proporciona uma experiência envolvente de chat simulando interações entre dois usuários. Esta aplicação foi cuidadosamente criada para fornecer uma solução eficaz e moderna para a comunicação online, proporcionando uma experiência de usuário fluida e agradável.
 
 ## Principais Características
 
