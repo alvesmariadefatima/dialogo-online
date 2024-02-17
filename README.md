@@ -8,7 +8,7 @@ O Diálogo Online é uma plataforma inovadora desenvolvida em React que proporci
 
 ## Principais Características
 
-- **Chat em Tempo Real:** O Diálogo Online oferece uma experiência de chat em tempo real, proporcionando uma sensação autêntica de interação instantânea.
+- **Simulação de Diálogos:** O recurso de Diálogo Online permite uma simulação interativa entre duas pessoas, oferecendo uma experiência próxima à conversa real.
 
 - **Design Responsivo:** Desenvolvido com a última tecnologia em React, o Diálogo Online adapta-se perfeitamente a diferentes dispositivos, garantindo uma experiência consistente em desktops, tablets e smartphones.
 
