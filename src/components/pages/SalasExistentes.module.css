@@ -4,7 +4,7 @@
     color: white;
 }
 
-.txtsala, .txtdescricao {
+.txtsala, .txtdescricao, .txtconvites {
     color: blue;
     text-align: center;
 }
@@ -31,6 +31,8 @@
 }
 
 section {
+    width: 40vw;
+    margin: 0 auto;
     background-color: white;
     border-radius: 20px;
 }
