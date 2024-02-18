@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nome": "Grupo Filmes 🍿",
+        "descricao": "Bate-papo sobre filmes"
+    },
+    {
+        "id": 2,
+        "nome": "Música 🎼",
+        "descricao": "Discussão sobre música"
+    },
+    {
+        "id": 3,
+        "nome": "Conversas e fofocas 💬",
+        "descricao": "Conversa casual"
+    }
+]
