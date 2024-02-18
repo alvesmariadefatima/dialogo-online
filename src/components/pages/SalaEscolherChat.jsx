@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Importe o useEffect
 import styles from './SalaEscolherChat.module.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
 function SalaEscolherChat() {
-    const [salas, setSalas] = useState([]);
+    const [salas, setSalas] = useState([]); // Defina o estado salas e a função setSala
 
-    const adicionarSala = (novaSala) => {
-        if (!novaSala.nome || !novaSala.descricao) {
-            alert('Por favor, preencha todos os campos.'); // Alerta JavaScript
-            return;
-        }
-        setSalas([...salas, novaSala]);
-    };
+    useEffect(() => {
+        const carregarSalas = async () => {
+            try {
+                setSalas(salas);
+            } catch (error) {
+                console.error('Erro ao carregar salas:', error.message);
+                // Trate o erro, exiba uma mensagem de erro para o usuário, etc.
+            }
+        };
+        carregarSalas();
+    }, []);
 
     return (
         <div>
