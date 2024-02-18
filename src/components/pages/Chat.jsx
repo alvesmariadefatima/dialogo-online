@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import styles from './Chat.module.css';
 import Navbar from '../Navbar/Navbar';
 
-const Chat = () => {
+const Chat = () => {  
   const [messages, setMessages] = useState(() => {
     const storedMessages = localStorage.getItem('chatMessages');
     return storedMessages ? JSON.parse(storedMessages) : [];
@@ -64,10 +65,17 @@ const Chat = () => {
         <h1>Diálogo Online | Chat 💬</h1>
         <h3>Conecte-se com pessoas incríveis e faça amizades 💗</h3>
       </div>
+      <div className={styles.containerButton}>
+          <Link to="/SalasExistentes">
+            <button type="submit" className={styles["send-back"]}>
+                Voltar
+            </button>
+          </Link>
+        </div>
 
       <div className={styles['chat-container']}>
         <div>
-          <h1 className={styles.txtbatepapo}>Bate-papo 🗣️</h1>
+          <h1 className={styles.txtbatepapo}>Chat 💬</h1>
         </div>
         <div className={styles['chat-messages']}>
           {messages.map((message) => (
