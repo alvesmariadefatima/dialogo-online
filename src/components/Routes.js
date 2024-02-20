@@ -9,7 +9,7 @@ import CriarSala from './pages/CriarSala';
 import Loading from './Loading/Loading';
 import Navbar from './Navbar/Navbar';
 
-function App() {
+function AppRoutes() {
     return (
         <Router>
             <Routes>
@@ -27,4 +27,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppRoutes;
